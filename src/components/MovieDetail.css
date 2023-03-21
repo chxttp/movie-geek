@@ -1,0 +1,137 @@
+.detail-container {
+    display: flex;
+    justify-content: space-between;
+    
+  }
+  
+  .detail-container img {
+    width: 100%;
+  }
+  
+  .detail-container h4,
+  .detail-container p {
+    color: white;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .detail-container .left-column {
+    padding-top: 100px;
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .detail-container .right-column {
+    padding-top: 80px;
+    width: 40%;
+  }
+  
+  .movie-detail {
+    background-color: #1D1D1D;
+  }
+  
+  .detail-container img {
+    width: 150px;
+    height: 200px;
+  }
+  
+  .menu {
+    border-bottom: 3px solid white;
+    margin-top: 150px;
+    display: flex;
+    justify-content: space-between;
+    
+  }
+  
+  .menu a {
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+    margin: 0 10px;
+    border-radius: 5px;
+    border: 1px solid white;
+    transition: all 0.3s ease;
+  }
+  
+  .menu a:hover {
+    background-color: white;
+    color: #1D1D1D;
+  }
+  
+  .review {
+    margin-top: 50px;
+    display: flex;
+    align-items: center;
+  }
+  
+  .review label {
+    color: white;
+    margin-right: 10px;
+  }
+  
+  .review input[type="radio"] {
+    display: none;
+  }
+  
+  .review input[type="radio"] + label {
+    font-size: 20px;
+    color: #ccc;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .review input[type="radio"]:checked + label {
+    color: yellow;
+  }
+  
+  
+  
+  .stars span.active {
+    color: yellow;
+  }
+  .right-column .rating{
+    margin-top: 100px;
+    display: flex;
+    justify-content:center;
+    
+  }
+  .like-button{
+    margin-top: 100px;
+    margin-left: -10px;
+  }
+  .heart{
+    color: red;
+    width: 100px;
+  }
+  .watchlist{
+    width: 100px;
+    color: white;
+  }
+  .eyes{
+    width: 100px;
+    color: white;
+  }
+  .cast{
+    padding-top: 60px;
+  }
+  .popular-reviews {
+    padding-top: 300px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid #ccc;
+    width: 80%;
+  }
+  
+  .popular {
+    color: white;
+    font-weight: bold;
+    padding-right: 20px;
+  }
+  
+  .more {
+    color: white;
+  }
+  

@@ -5,7 +5,7 @@ import { useNavigate, Redirect, Navigate } from 'react-router-dom';
 import './Login.css';
 import logo from '/Users/chattp/Desktop/TeamProject/movie-geek/src/Images/moviegeek.png'
 
-function Login() {
+function Signup() {
   const navigate = useNavigate();
   // const history = useHistory();
   const [username, setUsername] = useState("");
@@ -46,18 +46,23 @@ function Login() {
           </label>
           <br />
           <label className="login-label">
-            <div className="password-text">Password:</div>
+            <div className="password-text">Create Password:</div>
             <input className="login-input" type="password" value={password} onChange={handlePasswordChange} />
           </label>
-          <NavLink to="/Signup">
-            Don't have an account?
-          </NavLink>
           <br />
-          <button className="login-button" type="submit">Sign In</button>
+          <label className="login-label">
+            <div className="password-text">Confirm Password:</div>
+            <input className="login-input" type="password" value={password} onChange={handlePasswordChange} />
+          </label>
+          <br />
+          <button className="login-button" type="submit">Create an account</button>
+          <NavLink to="/login">
+            Already have an account?
+          </NavLink>
         </form>
       </div>
     </div>
   );
 }
 
-export default Login;
+export default Signup;

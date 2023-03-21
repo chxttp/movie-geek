@@ -1,12 +1,24 @@
 import React from 'react';
+import Navbar from './Navbar';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import Login from './Login'
+import './Home.css'
+import MovieList from './MovieList';
+import PopularList from './PopularList';
 
 function Home() {
-    console.log("Ggfggfg")
+  
   return (
-    <div>
-      <h1>Welcome to the Home Page</h1>
+    <div className='Home'>
+      <Navbar />
+      <MovieList listType='new'/>
+      <MovieList listType='popular'/>
+      <MovieList listType ='oscar'/>
+      <PopularList/>
+
     </div>
+    
   );
 }
 
-export default Home; 
+export default Home;

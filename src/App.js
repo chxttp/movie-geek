@@ -1,32 +1,30 @@
 import React from 'react';
-
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-
-
 import './App.css';
 import Login from './components/Login';
+import Signup from './components/Signup';
 import Home from './components/Home';
+import Navbar from './components/Navbar';
+import { Navigate } from 'react-router-dom';
+import MovieDetail from './components/MovieDetail';
+
 
 function App() {
+  
   return (
-    // <Router>
-    //   <Switch>
-    //     <Route exact path="/">
-    //       <Login />
-    //     </Route>
-    //     <Route path="/home">
-    //       <Home />
-    //     </Route>
-    //   </Switch>
-    // </Router>
-
     <Router>
-    <Routes>
-      <Route exact path="/" element={<Login/>} />
-      <Route path="/home" element={<Home/>} />
-      
-    </Routes>
-  </Router>
+      <div>
+        
+        <Routes>
+          <Route exact path="/" element={<Home/>} />
+          <Route path="/home" element={<Home/>} />
+          <Route path="/login" element={<Login/>} />
+          <Route path="/signup" element = {<Signup/>}/>
+          <Route path="/MovieDetail" element = {<MovieDetail/>}/>
+         
+        </Routes>
+      </div>
+    </Router>
   );
 }
 
