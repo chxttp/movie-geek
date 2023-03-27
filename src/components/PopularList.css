@@ -20,6 +20,7 @@
   justify-content: center;
   flex-wrap: wrap;
   transform: translateX(-50%);
+  
   padding-left: 55%;
     
     
@@ -30,6 +31,7 @@
     justify-content: center;
     flex-wrap: wrap;
     transform: translateX(-50%);
+    
   padding-left: -55%;
     
     
@@ -53,6 +55,7 @@
   } */
 
   .popular-card {
+    /*136px -30%*/
     width: 136px;
     margin-left: -30%;
    
@@ -65,6 +68,7 @@
     width: 150px;
     height: 200px;
     object-fit: cover; 
+    border: 1px solid white;
     
     
   }
@@ -94,6 +98,7 @@
   .popular-list-title {
     position: relative;
     border-bottom: 3px solid white;
+    /* margin-left: 5%; */
    
     padding-bottom: 2px;
     color: white;
@@ -132,3 +137,6 @@
     width: 100%;
 
   }
+
+  
+  

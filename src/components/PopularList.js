@@ -3,11 +3,11 @@ import './PopularList.css';
 
 function PopularList() {
   const movies1 = [
-    { id: 1, title: 'Movie A', imageUrl: 'https://images.fandango.com/ImageRenderer/0/0/redesign/static/img/default_poster.png/0/images/masterrepository/Fandango/227028/Gangubai-BookingsOpenV.jpg' },
-    { id: 2, title: 'Movie B', imageUrl: 'https://hippy.in/wp-content/uploads/2014/06/lagaan-bollywood-movie-poster.jpg' },
-    { id: 3, title: 'Movie C', imageUrl: 'https://1.bp.blogspot.com/-79vmCCwoZ_E/X4_artAUp7I/AAAAAAAAaO4/qsr-ZiGmgwcmsP72F_NAyWamwA2rsLhTwCLcBGAsYHQ/s595/Suraj-Pe-Mangal-Bhari-movie-poster-release-date.jpg' },
-    { id: 4, title: 'Movie D', imageUrl: 'http://www.boxofficemovies.in/now/wp-content/uploads/New-poster-of-Akshay-Kumar-starrer-Gold-movie.jpg' },
-    { id: 5, title: 'Movie E', imageUrl: 'https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/23f9b25876903.5de890e9ce8ee.png' }
+    { id: 1, title: 'INDIAN MAFIA 🏴 ☠️', imageUrl: 'https://images.fandango.com/ImageRenderer/0/0/redesign/static/img/default_poster.png/0/images/masterrepository/Fandango/227028/Gangubai-BookingsOpenV.jpg' },
+    { id: 2, title: 'INDIAN MAFIA 🏴 ☠️', imageUrl: 'https://hippy.in/wp-content/uploads/2014/06/lagaan-bollywood-movie-poster.jpg' },
+    { id: 3, title: 'INDIAN MAFIA 🏴 ☠️', imageUrl: 'https://1.bp.blogspot.com/-79vmCCwoZ_E/X4_artAUp7I/AAAAAAAAaO4/qsr-ZiGmgwcmsP72F_NAyWamwA2rsLhTwCLcBGAsYHQ/s595/Suraj-Pe-Mangal-Bhari-movie-poster-release-date.jpg' },
+    { id: 4, title: 'INDIAN MAFIA 🏴 ☠️', imageUrl: 'http://www.boxofficemovies.in/now/wp-content/uploads/New-poster-of-Akshay-Kumar-starrer-Gold-movie.jpg' },
+    { id: 5, title: 'INDIAN MAFIA 🏴 ☠️', imageUrl: 'https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/23f9b25876903.5de890e9ce8ee.png' }
   ];
 
   const movies2 = [

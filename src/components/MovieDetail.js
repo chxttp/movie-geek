@@ -1,27 +1,35 @@
 import React, { useState } from "react";
 import Navbar from "./Navbar";
 import { FaHeart } from "react-icons/fa";
-import {MdOutlinePlaylistAddCircle} from "react-icons/md";
-import {BsEye} from "react-icons/bs";
+import { MdOutlinePlaylistAddCircle } from "react-icons/md";
+import { BsEye } from "react-icons/bs";
 import "./MovieDetail.css";
 import { color } from "@mui/system";
+import YouTube from "react-youtube";
 // import MyVideo from "https://youtu.be/RlOB3UALvrQ"
 
 function MovieDetail() {
+  const videoId = "_Z3QKkl1WyM";
   const [rating, setRating] = useState(0);
   const [liked, setLiked] = useState(false);
+
+  const opts = {
+    height: "390",
+    width: "600",
+    playerVars: {
+      autoplay: 2,
+    },
+  };
 
   const handleRatingChange = (newRating) => {
     setRating(newRating);
   };
 
-  const handleLikeClick = () => {
-
-  };
+  const handleLikeClick = () => {};
 
   const castClicked = () => {
-    document.getElementById("cast").innerHTML = "Letitia Wright, Lupita Nyong, Danai Gurira, Winston Duke, Florence Kasumba Dominique, Thorne Michaela, Coel Mabel, Cadena Tenoch, Huerta Mejía, Martin Freema, Julia Louis-Dreyfus, Angela Bassett";
-    
+    document.getElementById("cast").innerHTML =
+      "Letitia Wright, Lupita Nyong, Danai Gurira, Winston Duke";
   };
 
   return (
@@ -44,19 +52,14 @@ function MovieDetail() {
                   </span>
                 ))}
                 <div className="like-button">
-                    <p>Like this movie ?</p>
-                    <br />
-                <BsEye className="eyes"/>
-              <FaHeart onClick={handleLikeClick} className ="heart"/>
-              <MdOutlinePlaylistAddCircle className="watchlist"/>
-             
-
+                  <p>Like this movie ?</p>
+                  <br />
+                  <BsEye className="eyes" />
+                  <FaHeart onClick={handleLikeClick} className="heart" />
+                  <MdOutlinePlaylistAddCircle className="watchlist" />
+                </div>
               </div>
-              </div>
-              
-              
             </div>
-            
           </div>
           <div className="left-column">
             <h4>
@@ -78,7 +81,7 @@ function MovieDetail() {
             </p>
 
             <div>
-              {/* <video src = {MyVideo} controls width="640" height="360"/> */}
+              <YouTube videoId={videoId} opts={opts} className="youtube" />
             </div>
             <div className="menu">
               <button onClick={castClicked}>Cast</button>
@@ -91,20 +94,13 @@ function MovieDetail() {
               </button>
             </div>
             <div className="cast">
-            <p id = "cast" ></p>
+              <p id="cast"></p>
             </div>
-            
-            <div className="popular-reviews">
-                <div className="popular">
-                    POPULAR REVIEWS
-                </div>
-                <div className="more">
-                    MORE
-                </div>
-                
 
+            <div className="popular-reviews">
+              <div className="popular">POPULAR REVIEWS</div>
+              <div className="more">MORE</div>
             </div>
-            
           </div>
         </div>
       </div>
