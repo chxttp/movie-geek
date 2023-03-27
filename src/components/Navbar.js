@@ -22,7 +22,7 @@
 
 
 import { NavLink } from 'react-router-dom';
-import logo from "/Users/chattp/Desktop/TeamProject/movie-geek/src/Images/moviegeek.png";
+import logo from "../Images/moviegeek.png";
 import './Navbar.css'
 import TextField from "@mui/material/TextField";
 

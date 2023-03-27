@@ -3,7 +3,7 @@ import { NavLink } from 'react-router-dom';
 // import { useHistory } from "react-router-dom";
 import { useNavigate, Redirect, Navigate } from 'react-router-dom';
 import './Login.css';
-import logo from '/Users/chattp/Desktop/TeamProject/movie-geek/src/Images/moviegeek.png'
+import logo from '../Images/moviegeek.png';
 
 function Login() {
   const navigate = useNavigate();
