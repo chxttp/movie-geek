@@ -21,10 +21,44 @@ function Signup() {
   }
 
   function handleSubmit(event) {
+    let email = document.getElementById("email").value
     event.preventDefault();
-    console.log("Username:", username);
-    console.log("Password:", password);
-    setAuthenticated(true);
+    
+    
+
+    const newUser = {
+      username: username,
+      password: password,
+      email: email
+    };
+
+    // Fetch request to API endpoint for user registration
+    fetch('http://192.168.10.105:8080/user/add', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(newUser)
+    })
+    .then(response => {
+      if (response.ok) {
+        // If response is successful (status code 200-299)
+        return response.json(); // Convert response to JSON
+      } else {
+        throw new Error('Registration unsuccessful'); // Throw an error for unsuccessful response
+      }
+    })
+    .then(data => {
+      // Handle the response data
+      console.log('Registration successful:', data);
+      setAuthenticated(true); // Set authenticated state to true
+      // Perform any additional actions, such as storing authentication token, redirecting, etc.
+    })
+    .catch(error => {
+      // Handle any errors that may occur during the API request
+      console.error('Error during registration:', error);
+      
+    });
   }
 
   if (authenticated) {
@@ -40,6 +74,11 @@ function Signup() {
         </div>
         <h1 className="login-heading">Welcome to MovieGeek</h1>
         <form onSubmit={handleSubmit}>
+        <label className="login-label">
+            <div className="email-text">Email:</div>
+            <input className="login-input" type="email" id='email' />
+          </label>
+          <br />
           <label className="login-label">
             <div className="username-text">Username:</div>
             <input className="login-input" type="text" value={username} onChange={handleUsernameChange} />
