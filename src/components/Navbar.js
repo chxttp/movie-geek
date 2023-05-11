@@ -53,7 +53,9 @@ function Navbar() {
         </li>
 
         <li className='navbar-right'>
-          GEEKS
+          <NavLink to = "/geek" className="avtive hover">
+            GEEKS
+          </NavLink>
         </li>
         <li className='navbar-right'>
           <input placeholder='search'/>
