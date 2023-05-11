@@ -5,16 +5,39 @@ import Login from './Login'
 import './Home.css'
 import MovieList from './MovieList';
 import PopularList from './PopularList';
-
+import { useState, useContext, useEffect } from 'react';
+import Footer from './Footer';
+import UserData from '../Data/UserData';
 function Home() {
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
+  const [username, setUsername] = useState(true);
+
+  useEffect(() => {
+    setUsername(localStorage.getItem('username'));
+  }, []);
+
+  useEffect(() => {
+    if (username !== null) {
+      setIsLoggedIn(true);
+    } else {
+      setIsLoggedIn(false);
+    }
+  }, [username]);
+
+
+
   
+
   return (
     <div className='Home'>
-      <Navbar />
+      
+      <Navbar isLoggedIn={isLoggedIn} username={username}/>
       <MovieList listType='new'/>
       <MovieList listType='popular'/>
       <MovieList listType ='oscar'/>
       <PopularList/>
+      
+      <Footer/>
 
     </div>
     

@@ -6,6 +6,7 @@ import { BsEye } from "react-icons/bs";
 import "./MovieDetail.css";
 import { color } from "@mui/system";
 import YouTube from "react-youtube";
+import Footer from "./Footer";
 // import MyVideo from "https://youtu.be/RlOB3UALvrQ"
 
 function MovieDetail() {
@@ -104,6 +105,7 @@ function MovieDetail() {
           </div>
         </div>
       </div>
+      <Footer/>
     </div>
   );
 }

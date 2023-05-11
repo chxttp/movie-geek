@@ -1,4 +1,6 @@
 .detail-container {
+  padding-left: 5%;
+  padding-right: 5%;
     display: flex;
     justify-content: space-between;
     
@@ -26,6 +28,7 @@
   .detail-container .right-column {
     padding-top: 80px;
     width: 40%;
+    padding-right: 10%;
   }
   
   .movie-detail {
