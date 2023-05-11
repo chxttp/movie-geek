@@ -9,6 +9,7 @@ import { Navigate } from 'react-router-dom';
 import MovieDetail from './components/MovieDetail';
 import ProfilePage from './components/ProfilePage';
 import UserData from './Data/UserData';
+import Geeks from './components/Geeks';
 
 function App() {
   
@@ -25,6 +26,7 @@ function App() {
           <Route path="/signup" element = {<Signup/>}/>
           <Route path="/MovieDetail" element = {<MovieDetail/>}/>
           <Route path="/profile" element = {<ProfilePage/>}/> 
+          <Route path="/geek" element = {<Geeks/>}/> 
          
         </Routes>
       </div>
