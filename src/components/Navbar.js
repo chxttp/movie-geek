@@ -146,7 +146,9 @@ function Navbar(props) {
         </li>
 
         <li className='navbar-right'>
-          GEEKS
+        <NavLink to="/geek" className="active hover">
+            GEEKS
+          </NavLink>
         </li>
         <li className='navbar-right'>
           <input placeholder='search'/>
