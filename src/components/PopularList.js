@@ -51,7 +51,7 @@ function PopularList() {
         </div>
         
       </div>
-      <div className='list-name'>
+      {/* <div className='list-name'>
       <div className='list1'>
         <p>INDIAN MAFIA 🏴 ☠️</p>
       </div>
@@ -61,7 +61,7 @@ function PopularList() {
       </div>
 
 
-      </div>
+      </div> */}
       
       
     </div>

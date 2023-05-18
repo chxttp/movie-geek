@@ -33,7 +33,7 @@ function Signup() {
     };
 
     // Fetch request to API endpoint for user registration
-    fetch('http://192.168.10.105:8080/user/add', {
+    fetch('http://192.168.10.131:8080/user/add', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'

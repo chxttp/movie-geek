@@ -1,0 +1,175 @@
+.profile-page-container {
+  padding-left: 3%;
+  padding-right: 3%;
+  margin: 0 auto;
+  color: #fff;
+  font-family: 'Helvetica Neue', sans-serif;
+  
+}
+
+.profile-header {
+    background-image: url("https://media.istockphoto.com/id/1128410927/photo/blue-sky-background-and-white-clouds-soft-focus-and-copy-space.jpg?s=612x612&w=0&k=20&c=oOIBh0_Fsv2LhVHP9ZoCRMOPLCjXcuK3k9W5Srj0Eyc=");
+  background-repeat: no-repeat;
+
+  background-size: cover;
+ 
+  display: flex;
+  align-items: center;
+  padding: 80px;
+  
+  
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.profile-header img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  margin-right: 20px;
+  border: 3px solid #fff;
+}
+
+.profile-name {
+  flex: 1;
+}
+
+.profile-name h1 {
+  font-size: 24px;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.profile-name p {
+  font-size: 14px;
+  color: #666;
+}
+
+.profile-follow-button {
+  background-color: #fff;
+  color: #333;
+  font-size: 16px;
+  font-weight: bold;
+  padding: 10px 20px;
+  border: none;
+  margin-left: 25px;
+}
+
+.photo-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+  
+  .photo-grid img {
+    border: 1px solid white;
+    width: 70%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 5px;
+  }
+.recent-activities h2{
+    border-bottom: 2px solid white;
+
+}
+.profile-description{
+    padding-top: 10%;
+    float: right;
+   padding-bottom: 2%;
+    padding-left: 2%;
+    clear: both;
+}
+.profile-description .bio-title{
+    border-bottom: 2px solid white;
+    
+}
+
+/* .bio-edit{
+    float: right;
+} */
+.profile-description p{
+    clear: both;
+}
+.recent-activities{
+    padding-top: 10%;
+    max-width: 50%;
+    padding-right: 2%;
+}
+.profile-info{
+    display: flex;
+    justify-content: end;
+}
+.profile-info p{
+    
+    text-align: center;
+    font-size: 16px;
+    font-weight: bold;
+    max-height: 10px;
+    
+}
+
+.films{
+    padding-left: 2%;
+    padding-right: 2%;
+    border-right: 2px solid white;
+    max-height: 65px;
+    
+}
+.lists{
+    padding-left: 2%;
+    padding-right: 2%;
+    border-right: 2px solid white;
+    max-height: 65px;
+}
+.following{
+    padding-left: 2%;
+    padding-right: 2%;
+    border-right: 2px solid white;
+    max-height: 65px;
+}
+.followers{
+    padding-left: 2%;
+    max-height: 65px;
+    
+}
+
+.recent-review-container{
+    margin-top: 5%;
+    width: calc(51.5% - 20px);
+    margin-right: 2%;
+    margin-bottom: 20px;
+    
+    border-radius: 10px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+}
+  .recent-review-item {
+    margin-top: 5%;
+    display: flex; /* Update to display flex */
+    justify-content: space-between; /* Add justify-content */
+    margin-right: 2%;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  padding-left: 5%;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  .recent-review-container .recent-review-info {
+    
+    border-radius: 10px;
+    
+    margin-bottom: 10px;
+    padding: 10px;
+    width: 100%;
+  }
+.recent-review-text{
+    border-bottom: 2px solid white;
+}
+
+.recent-review-item img {
+    
+    height: 40%;
+    object-fit: cover;
+    width: 20%;
+    border: 1px solid white;
+  }
+  .recent-review-info{
+    margin-left: 2%;
+  }

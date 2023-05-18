@@ -1,31 +1,41 @@
-import React, { useState } from 'react';
+import React, { useState , useContext } from 'react';
 import { NavLink } from 'react-router-dom';
 // import { useHistory } from "react-router-dom";
 import { useNavigate, Redirect, Navigate } from 'react-router-dom';
 import './Login.css';
 import logo from '../Images/moviegeek.png';
+import Navbar from './Navbar';
+import UserData from '../Data/UserData';
+import ProfilePage from './ProfilePage';
 
 function Login() {
+  
   const navigate = useNavigate();
-  // const history = useHistory();
 
-  
   const [authenticated, setAuthenticated] = useState(false);
+  
+  const [username, setUsername] = useState('');
 
+  const { setUsername: setSharedUsername } = useContext(UserData);
   
 
-  
   function handleSubmit(event) {
-    let username = document.getElementById("username").value
-  let password = document.getElementById("password").value
     event.preventDefault();
-  
+
+    let username = document.getElementById("username").value;
+    let password = document.getElementById("password").value;
+    
+
+
+
+    
+
     const loginData = {
       username: username,
       password: password
     };
-  
-    fetch('http://192.168.10.105:8080/user/match', {
+
+    fetch('http://192.168.10.131:8080/user/match', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
@@ -43,32 +53,33 @@ function Login() {
       .then(data => {
         // Handle the response data
         if (data.username == loginData.username) {
-          
           // Check if the response data username and password match the entered values
           console.log("api",data.username)
           console.log("com", loginData.username)
           setAuthenticated(true); // Set authenticated state to true
+          setUsername(loginData.username);
+          setSharedUsername(loginData.username);
+          
           // Perform any additional actions, such as storing authentication token, redirecting, etc.
         } else {
           throw new Error('Login unsuccessful'); // Throw an error if login was not successful
-          
         }
       })
       .catch(error => {
         // Handle any errors that may occur during the API request
         console.error('Error during login:', error);
-        
       });
+      
   }
-  
 
-  if (authenticated == true) {
-    // history.push("/home"); 
+  if (authenticated) {
+    localStorage.setItem('username', username);
     navigate('/home')
   }
 
   return (
     <div className="login-container">
+    
       <div className="login-box">
         <div>
           <img src={logo}/>
@@ -93,6 +104,9 @@ function Login() {
       </div>
     </div>
   );
+  
 }
 
 export default Login;
+
+ 
